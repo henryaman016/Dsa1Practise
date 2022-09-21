@@ -1,39 +1,27 @@
-import java.util.Scanner;
-
 public class binarySearch {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the size of array");
-        int n=sc.nextInt();
-
-        int arr[]=new int[n];
-        System.out.println("enter the element of array");
-        for (int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
-        System.out.println("enter the key");
-        int key=sc.nextInt();
-        int result=-1;
-        int s=0,e=n-1,mid;
-
+    public static void main(String args[]){
+        int arr[]={4,5,6,8,9,1,3,7,2};
+        int s=0,e=arr.length-1,mid,result=-1;
+        int key= 9;
 
         while (s<=e) {
             mid = (s + e) / 2;
             {
-                if (key == arr[mid]) {
+                if (arr[mid] == key) {
                     result = mid;
                     break;
                 } else if (key < arr[mid])
                     e = mid - 1;
                 else
                     s = mid + 1;
+
             }
         }
-            if (result==-1){
-                System.out.println("not found");
-            }else {
-                System.out.println(result);
-            }
+                if(result==-1)
+                    System.out.println("not found");
+            else
+                    System.out.println(result);
+
         }
     }
 

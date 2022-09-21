@@ -1,31 +1,26 @@
 public class minMaxArray {
-    public static void main(String[] args) {
-        int arr[] = {82, 56, 9, 7, 13, 65, 12, 36, 92};
-        int min = arr[0];
-        int max = arr[0];
-        int pos = -1;
-        int ros = -1;
+    public static void main(String args[]){
+        int arr[]={40,31,15,10,66,23,51,28};
+        int min=arr[0];
+        int pos=-1;
 
+        int max=arr[0];
+        int sit=-1;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-                pos = i;
-        }
-
-                if (arr[i] > max) {
-                    max = arr[i];
-                    ros = i;
-//                }
-
+        for(int i=0;i<arr.length;i++){
+            if(min>arr[i]){
+                min=arr[i];
+                pos =i;
+            }
+            if(max<arr[i]){
+                max=arr[i];
+                sit =i;
             }
         }
-        System.out.println("minimum no. is " + min);
-        System.out.println("position of minimum no. is " + pos);
+        System.out.println(min);
+        System.out.println(pos);
 
-
-        System.out.println("maximum no. is " + max);
-        System.out.println("position of maximum no. is "+ros);
-
+        System.out.println(max);
+        System.out.println(sit);
     }
-    }
+}
