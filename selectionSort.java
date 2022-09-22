@@ -1,17 +1,10 @@
 public class selectionSort {
     public static void main(String[] args) {
-        int arr[]={42,62,9,7,13,6,4,8,42,25};
-        int n=arr.length;
-        System.out.println("Original array");
-        for (int i=0;i<arr.length;i++){
-            System.out.println(arr[i]+" ");
+        int arr[]={84,9,57,34,64,15,2,54,25,12,52};
 
-
-        }
-
-        for (int i=0;i<n-1;i++){
+        for (int i =0;i<arr.length;i++){
             int min_index=i;
-            for (int j=i+1;j<n;j++){
+            for (int j=i+1;j<arr.length;j++){
                 if (arr[j]<arr[min_index]){
                     min_index=j;
                 }
@@ -20,8 +13,9 @@ public class selectionSort {
             arr[min_index]=arr[i];
             arr[i]=temp;
         }
-        for (int i=0;i<n;i++){
-            System.out.print(arr[i]+" ");
+        System.out.println();
+        for (int i=0;i<arr.length;i++){
+            System.out.println(arr[i]+" ");
         }
     }
 }
