@@ -1,26 +1,51 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class hashMap2 {
-    public static void main(String[] args) {
-        HashMap<Integer,String>languages=new HashMap<>();
-        languages.put(1,"java");
-        languages.put(2,"python");
-        languages.put(3,"javascript");
+    public static void main(String args[]){
 
-        System.out.println("HashMap : "+ languages);
+                HashMap<String, Integer> people = new HashMap<String, Integer>();
 
-        String value = languages.get(1);
-        System.out.println("Value at index 1 :" + value);
+                people.put("Gunjan", 32);
+                people.put("Abhay", 27);
+                people.put("Sandeep", 25);
+                people.put("Neelam", 28);
 
-
-        System.out.println("Keys: "+ languages.keySet());
-        System.out.println("Values: "+ languages.values());
-        System.out.println("Key/Value mappings: " + languages.entrySet());
-        System.out.println("keys: "+ languages.keySet()+" Values :" + languages.values());
+                System.out.println(people);
 
 
-    for (Map.Entry<Integer,String >e: languages.entrySet())
-        System.out.println("Key: " + e.getKey() + " value: " +e.getValue());
-    }
-}
+                System.out.println(people.get("Neelam"));
+
+
+               /* people.remove("Neelam");
+                System.out.println(people);
+
+       hm.clear();
+        System.out.println(hm);*/
+
+
+                System.out.println(people.size());
+
+                for(String i:people.keySet()) {
+                    System.out.println(i);
+                }
+
+                {
+                    for(Integer i: people.values()) {
+
+                        System.out.println(i);
+
+
+                    }
+                }
+
+
+
+                for (String i : people.keySet()) {
+                    System.out.println("key: " + i + " & " + " value  : " + people.get(i));
+                }
+            }
+        }
+
+
+
+

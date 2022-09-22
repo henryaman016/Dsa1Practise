@@ -1,17 +1,48 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class hashMap {
-    public  static void main(String args[]){
-        HashMap<Integer,String>map=new HashMap<Integer,String>();
-        map.put(1,"Mango");
-        map.put(2,"Apple");
-        map.put(3,"Banana");
-        map.put(4,"Grapes");
+    public static void main(String[] args) {
 
-        System.out.println("Iterating Hashmap...");
-        for(Map.Entry m:map.entrySet()){
-            System.out.println(m.getKey()+ " " +m.getValue());
+        HashMap<String, String> hm = new HashMap<String, String>();
+
+        hm.put("Rajasthan", "Jaipur");
+        hm.put("Bihar", "Patna");
+        hm.put("Jharkhand", "Ranchi");
+        hm.put("Goa", "Panji");
+
+        System.out.println(hm);
+
+
+        System.out.println(hm.get("Rajasthan"));
+
+
+        hm.remove("Rajasthan");
+        System.out.println(hm);
+
+      /* hm.clear();
+        System.out.println(hm);*/
+
+
+        System.out.println(hm.size());
+
+        for(String i:hm.keySet()) {
+            System.out.println(i);
+        }
+
+        {
+            for(String i: hm.values()) {
+
+                System.out.println(i);
+
+
+            }
+        }
+
+
+
+            for (String i : hm.keySet()) {
+                System.out.println("key: " + i + " & " + " value  : " + hm.get(i));
+            }
         }
     }
-}
+
